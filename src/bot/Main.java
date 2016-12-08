@@ -1,11 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package bot;
 
-//import static bot.Consumer.voice;
 import javax.swing.JButton;
 import java.io.*;
 import java.awt.event.ActionEvent;
@@ -16,7 +11,7 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ArrayBlockingQueue;
 /**
  *
- * @author James
+ * @author James O'Connorhorrill
  */
 public class Main extends javax.swing.JFrame {
     
