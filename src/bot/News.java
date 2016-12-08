@@ -32,7 +32,7 @@ public class News {
     public String business = "";
 
     // yahoo API URL for london weather
-    private static String url = "http://www.pass-the-ielts-exam.com/rss_xml/news.xml";   
+    private static String url = "http://www.cuerobotics.com/rss_xml/news.xml";   
 
     // default constructor
     public News() {
