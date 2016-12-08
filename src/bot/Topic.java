@@ -22,6 +22,12 @@ public class Topic {
             currentTopic = "oldTopic.xml";
             System.out.println("the current topic in Topic is  " + currentTopic);
         }
+        if (topic.equals("maincontext")){
+            currentTopic = "newContext.xml";
+            System.out.println("the current topic in Topic is  " + currentTopic);
+        }
+        
+        //maincontext
         Context.newSource(currentTopic);
     }
 }
