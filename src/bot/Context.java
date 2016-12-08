@@ -20,5 +20,6 @@ public class Context {
     public static void newSource(String currentTopic){
     source = currentTopic;
     }
+    // TO DO - get the Bot and DataParser class to reload in JVM while Main class persists.
 }
 
