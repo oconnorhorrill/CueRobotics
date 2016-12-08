@@ -10,8 +10,6 @@ public class Topic {
     
 // topic variables
     public String currentTopic = "";
-    public String testTopic = "";
-    public String newtopic = "";
     
     public void getTopic(String topic){
         if (topic.equals("newtopic")) {
