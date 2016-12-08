@@ -26,8 +26,6 @@ public class Topic {
             currentTopic = "newcontext.xml";
             System.out.println("the current topic in Topic is  " + currentTopic);
         }
-        
-        //maincontext
         Context.newSource(currentTopic);
     }
 }
