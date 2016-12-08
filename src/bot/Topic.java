@@ -23,7 +23,7 @@ public class Topic {
             System.out.println("the current topic in Topic is  " + currentTopic);
         }
         if (topic.equals("maincontext")){
-            currentTopic = "newContext.xml";
+            currentTopic = "newcontext.xml";
             System.out.println("the current topic in Topic is  " + currentTopic);
         }
         
