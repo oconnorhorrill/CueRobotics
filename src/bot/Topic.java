@@ -14,15 +14,15 @@ public class Topic {
     public void getTopic(String topic){
         if (topic.equals("newtopic")) {
             currentTopic = "newTopic.xml";
-        System.out.println("the current topic in Topic is  " + currentTopic);
+        //System.out.println("the current topic in Topic is  " + currentTopic);
         }
         if (topic.equals("oldtopic")){
             currentTopic = "oldTopic.xml";
-            System.out.println("the current topic in Topic is  " + currentTopic);
+        //System.out.println("the current topic in Topic is  " + currentTopic);
         }
         if (topic.equals("maincontext")){
             currentTopic = "newcontext.xml";
-            System.out.println("the current topic in Topic is  " + currentTopic);
+        //System.out.println("the current topic in Topic is  " + currentTopic);
         }
         Context.newSource(currentTopic);
     }
