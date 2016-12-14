@@ -18,6 +18,7 @@ public class Context {
     public void newSource(String currentTopic){
     source = currentTopic;
     Main main = new Main();
+    main.deleteHistory();
     main.loadContext();
     }
 
