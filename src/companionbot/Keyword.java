@@ -1,10 +1,5 @@
 package companionbot;
 
-/**
- * MajBot 1.0
- *
- * @author Seyed Majid Khosravi
- */
 public class Keyword {
 
     public String keyword = "";
