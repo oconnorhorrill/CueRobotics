@@ -1,7 +1,7 @@
 # CueRobotics
 Source code for companion Bot for dementia patients
 
-A stripped down version to seek solutions to change conversation xml files. some of which become fairly massive.
+A stripped down version to seek solutions to change conversation xml files. Some of which become fairly massive after authentic interactions.
 
 // TO DO
 
