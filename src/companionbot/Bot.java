@@ -4,11 +4,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * MajBot 1.0
- * 
- * @author Seyed Majid Khosravi
- */
 public class Bot {
     // Store all regular expression matches
     private HashMap<String,String> dictionary;
