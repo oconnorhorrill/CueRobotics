@@ -3,11 +3,6 @@ package companionbot;
 import java.util.ArrayList;
 import java.util.Random;
 
-/**
- * MajBot 1.0
- *
- * @author Seyed Majid Khosravi
- */
 public class State {
 
     private String id = "";
