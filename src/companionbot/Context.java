@@ -17,7 +17,6 @@ public class Context {
     //get the new topic from Topic Class and prepare to reload bot and parset
     public void newSource(String currentTopic){
     source = currentTopic;
-    System.out.println("check source in Context is  " + source);
     Main main = new Main();
     main.loadContext();
     }
