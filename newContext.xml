@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Config>
+	<State id="0">
+        <message>You have reloaded a new context. Are you happy?</message>
+        <keyword target="1">Yes</keyword>
+        <keyword target="2">*</keyword>
+    </State>
+
+	<State id="1">
+        <message>I thought you would be. Want to try to go back?</message>
+        <keyword className="Topic" arg="basecontext">Yes</keyword>
+        <keyword target="2">No</keyword>
+        <keyword target="2">*</keyword>
+    </State>
+
+	<State id="2">
+        <message>You're happy to stay with the new context?</message>
+        <keyword className="Topic" arg="basecontext">No</keyword>
+        <keyword target="3">Yes</keyword>
+        <keyword target="3">*</keyword>
+    </State>
+
+    <State id="3">
+        <message>Well there is not much to see here. Sorry</message>
+        <keyword target="0">*</keyword>
+    </State>
+
+    <InvalidMessages>
+        <message>Huh, I didn't understand?</message>
+        <message>Sorry, I am slow!</message>
+        <message>What do you mean?</message>
+        <message>Could you explain?</message>
+        <message>Sorry about that, please explain clearly</message>
+    </InvalidMessages>
+</Config>

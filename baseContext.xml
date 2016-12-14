@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Config>
+	<State id="0">
+        <message>Hello. you have reached the base context xml</message>
+        <keyword target="1">really</keyword>
+        <keyword target="1">*</keyword>
+    </State>
+
+	<State id="1">
+        <message>Yes really. Do you want to change context?</message>
+        <keyword className="Topic" arg="newcontext">Yes</keyword>
+        <keyword target="2">No</keyword>
+    </State>
+
+	<State id="2">
+        <message>Then we will stay with the base context.</message>
+        <keyword target="0">Yes</keyword>
+        <keyword className="Topic" arg="newcontext">No</keyword>
+    </State>
+
+    <InvalidMessages>
+        <message>Huh, I didn't understand?</message>
+        <message>Sorry, I am slow!</message>
+        <message>What do you mean?</message>
+        <message>Could you explain?</message>
+        <message>Sorry about that, please explain clearly</message>
+    </InvalidMessages>
+</Config>
