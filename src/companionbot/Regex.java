@@ -1,18 +1,9 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 
 package companionbot;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- * MajBot 1.0
- *
- * @author Seyed Majid Khosravi
- */
 public class Regex {
 
     public static String match(String pattern, String keyword){
