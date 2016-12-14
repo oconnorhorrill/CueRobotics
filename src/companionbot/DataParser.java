@@ -11,11 +11,6 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-/**
- * MajBot 1.0
- * 
- * @author Seyed Majid Khosravi
- */
 public class DataParser {
 
     private Document dom;
