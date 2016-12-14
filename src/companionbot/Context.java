@@ -12,7 +12,6 @@ public class Context {
 
     //method to get value of source for dataparser
     public String getSource(){
-    //public static String getSource(){
     return source;
     }
     //get the new topic from Topic Class and prepare to reload bot and parset
