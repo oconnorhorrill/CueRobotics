@@ -33,6 +33,10 @@ public class Main implements Initializable {
         txtHistory.setText(txtHistory.getText() + "\nBot: " + message);
     }
     
+    public void deleteHistory() {
+        txtHistory.setText("");
+    }
+    
     @FXML
     public void onSend(ActionEvent event) {
         // display users message
