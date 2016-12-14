@@ -6,7 +6,7 @@ import java.text.SimpleDateFormat;
 
 public class Morning {
     
-    private String userID = "Olivia";
+    private String userID = "";
     private static String time;
     private static String today;
     private String schedule;
