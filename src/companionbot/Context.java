@@ -1,26 +1,28 @@
 
 package companionbot;
+
 /**
  *
  * @author James
  */
-        
 public class Context {
-    public String source = "basecontext.xml";
+    private final String source;
     
-    private Bot bot;
-
+    public Context() {
+        source = "basecontext.xml";
+    }
+    
+    public Context(String source) {
+        this.source = source;
+    }
+    
     //method to get value of source for dataparser
     public String getSource(){
-    return source;
+        return source;
     }
-    //get the new topic from Topic Class and prepare to reload bot and parset
-    public void newSource(String currentTopic){
-    source = currentTopic;
-    Main main = new Main();
-    main.deleteHistory();
-    main.loadContext();
-    }
-
+    
+    public Topic getTopic(String newTopic) {
+        return Topic.getTopic(getSource(), newTopic);
+    }    
 }
 
