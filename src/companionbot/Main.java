@@ -30,8 +30,8 @@ public class Main implements Initializable {
     private TextField txtMessage;
     @FXML
     private Button button;
-    //@FXML    
-    public Bot bot;
+
+    private Bot bot;
     
        
     public void addBotText(String message) {
