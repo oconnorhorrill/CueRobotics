@@ -20,7 +20,7 @@ public class DataParser {
     public  int stateCounter = 1000;
     public String fileSource;
     // default constructor
-    public DataParser() {
+    public DataParser(Context context) {
 
         // Load the XML file and parse it
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
@@ -28,7 +28,6 @@ public class DataParser {
         try {
 
             //get the filepath of source
-            Context context = new Context();
             String fileSource = context.getSource();
             
             //Using factory get an instance of document builder
