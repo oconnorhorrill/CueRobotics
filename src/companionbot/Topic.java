@@ -37,17 +37,14 @@ public class Topic {
     public static Topic getTopic(String currentTopicXml, String topic){
         
         String topicXml = "baseContext.xml";
-        boolean newTopic = !topicXml.equals(currentTopicXml);
         if (topic.equals("newcontext")) {
             topicXml = "newContext.xml";
-            return new Topic(topicXml, "altbot", newTopic);
+            return new Topic(topicXml, "altbot", !topicXml.equals(currentTopicXml));
         }
         if (topic.equals("basecontext")){
-            return new Topic(topicXml, "altbot", newTopic);
+            return new Topic(topicXml, "altbot", !topicXml.equals(currentTopicXml));
         }
-
-        System.out.println("the current topic in Topic is  " + topicXml);        
-        return new Topic(topicXml, "homebot", newTopic);
+        return new Topic(topicXml, "homebot", !topicXml.equals(currentTopicXml));
     }
 }
 
