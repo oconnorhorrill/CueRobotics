@@ -1,27 +1,33 @@
 package companionbot;
 
+import companionbot.context.ConversationContext;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import companionbot.observer.TopicSubject;
 
 public class Bot {
     // Store all regular expression matches
-    private HashMap<String,String> dictionary;
+    private final HashMap<String,String> dictionary;
 
+    private ConversationContext conversationContext;
+    
+    private final TopicSubject topicSubject;
+    
     // Default state to start the bot
     String level = "0";
-    DataParser parser;
-
+    
     // default constructor
-    public Bot(String level, DataParser parser) {
-        dictionary = new HashMap<String,String>();
+    public Bot(String level, ConversationContext conversationContext, TopicSubject topicSubject) {
+        dictionary = new HashMap<>();
         this.level = level;
-        this.parser = parser;
+        this.conversationContext = conversationContext;
+        this.topicSubject = topicSubject;
     }
 
     // get current state message
     public String getMessage() {
-        State state = parser.getState(level);
+        State state = conversationContext.getParser().getState(level);
         return replaceMatches(state.getMessage()).trim();
     }
 
@@ -29,7 +35,7 @@ public class Bot {
     public String send(String message) {
 
         String response = "";
-        State state = parser.getState(level);
+        State state = conversationContext.getParser().getState(level);
 
 
         // end of the tree
@@ -42,7 +48,7 @@ public class Bot {
 
         // if no keyword is matched, display one of the invalid answers
         if (match == null) {
-            response = parser.getInvalidAnswer();
+            response = conversationContext.getParser().getInvalidAnswer();
         } else {
 
             // if match classname is provided, check to get the dynamic response
@@ -56,8 +62,12 @@ public class Bot {
                 //}
                 // check for Topic dynamic response
                 if (match.className.equals("Topic")) {
-                Topic topic = new Topic();
-                topic.getTopic(match.arg);
+                    Topic t = conversationContext.getContext().getTopic(match.arg);
+                    if (t.isNewTopic()) {
+                        System.out.println("the current topic in Topic is  " + t.getCurrentTopic());        
+                        conversationContext = ConversationContext.newConversationContext(new Context(t.getCurrentTopic()));
+                        topicSubject.notifyObservers();
+                    }
                 }                
             } else {
 
@@ -65,7 +75,7 @@ public class Bot {
                 if (response.length() == 0) {
 
                     this.level = match.target;
-                    state = parser.getState(level);
+                    state = conversationContext.getParser().getState(level);
 
                     // if it is end of the tree
                     if (state.getKeywords().isEmpty()) {
@@ -111,12 +121,12 @@ public class Bot {
                 // create a new state for new trained data
                  ArrayList<String> messages = new ArrayList<String>();
                 messages.add(result);
-                State myState = new State(String.valueOf(parser.stateCounter),messages,new ArrayList());
-                parser.addState(myState);
+                State myState = new State(String.valueOf(conversationContext.getParser().stateCounter),messages,new ArrayList());
+                conversationContext.getParser().addState(myState);
 
                 // add the new trained keyword
                 Keyword keyword = new Keyword(subject, myState.getId(), "", "", "", 1, "" );
-                State state = parser.getState("1");
+                State state = conversationContext.getParser().getState("1");
                 ArrayList<Keyword> keywords = state.getKeywords();
                 keywords.add(keyword);
 
