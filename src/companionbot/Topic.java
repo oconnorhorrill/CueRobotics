@@ -8,29 +8,46 @@ package companionbot;
 public class Topic {
     
 // topic variables
-    public String currentTopic = "";
-    public String newbot = "";
+    private final String currentTopic;
+    private final String newbot;
+    private final Boolean newTopic;
     
-    public void getTopic(String topic){
+    private Topic(String currentTopic) {
+        this(currentTopic, "homebot", false);
+    }
+    
+    private Topic(String currentTopic, String newbot, boolean newTopic) {
+        this.currentTopic = currentTopic;
+        this.newbot = newbot;
+        this.newTopic = newTopic;
+    }
+
+    public String getCurrentTopic() {
+        return currentTopic;
+    }
+
+    public String getNewbot() {
+        return newbot;
+    }
+    
+    public boolean isNewTopic() {
+        return newTopic;
+    }
+    
+    public static Topic getTopic(String currentTopicXml, String topic){
+        
+        String topicXml = "baseContext.xml";
+        boolean newTopic = !topicXml.equals(currentTopicXml);
         if (topic.equals("newcontext")) {
-            currentTopic = "newContext.xml";
-            newbot = "altbot";
-        System.out.println("the current topic in Topic is  " + currentTopic);
+            topicXml = "newContext.xml";
+            return new Topic(topicXml, "altbot", newTopic);
         }
         if (topic.equals("basecontext")){
-            currentTopic = "baseContext.xml";
-            //Main.changeBot(newbot);
-            newbot = "altbot";
-            System.out.println("the current topic in Topic is  " + currentTopic);
+            return new Topic(topicXml, "altbot", newTopic);
         }
-        if (topic.equals("basecontext")){
-            currentTopic = "newcontext.xml";
-            newbot = "homebot";
-            //Main.changeBot(newbot);
-            System.out.println("the current topic in Topic is  " + currentTopic);
-        }
-        Context context = new Context();
-        context.newSource(currentTopic);
+
+        System.out.println("the current topic in Topic is  " + topicXml);        
+        return new Topic(topicXml, "homebot", newTopic);
     }
 }
 
