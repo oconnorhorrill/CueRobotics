@@ -1,6 +1,10 @@
 
 package companionbot;
 
+import companionbot.context.ConversationContext;
+import companionbot.observer.TopicObserver;
+import companionbot.observer.TopicObserverImpl;
+import companionbot.observer.TopicSubjectImpl;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -10,6 +14,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import companionbot.observer.TopicSubject;
 
 /**
  *
@@ -25,8 +30,8 @@ public class Main implements Initializable {
     private TextField txtMessage;
     @FXML
     private Button button;
-    @FXML    
-    public Bot bot;
+
+    private Bot bot;
     
        
     public void addBotText(String message) {
@@ -58,16 +63,23 @@ public class Main implements Initializable {
     } 
     
     public void loadContext(){
-        // construct a data parser
-        DataParser dp = new DataParser();
-
+        TopicSubject subject = setupObservers();
+        // construct a new context
+        ConversationContext cc = ConversationContext.newConversationContext(new Context());
         // construct new bot with level 0 as default and given data parser
-        bot = new Bot("0", dp);
+        bot = new Bot("0", cc, subject);
 
         // display the default message
         txtHistory.setText("Bot: " + bot.getMessage());
     }
     
+    private TopicSubject setupObservers() {
+        TopicObserver observer = new TopicObserverImpl(txtHistory);
+        TopicSubject subject = new TopicSubjectImpl();
+        subject.addObserver(observer);
+        return subject;
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         loadContext();  
