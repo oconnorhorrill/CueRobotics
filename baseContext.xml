@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Config>
 	<State id="0">
-        <message>Hello. you have reached the base context xml</message>
+        <message>Hello. you have reached the base context xml state 0</message>
         <keyword target="1">really</keyword>
         <keyword target="1">*</keyword>
     </State>
 
 	<State id="1">
-        <message>Yes really. Do you want to change context?</message>
+        <message>Yes really. Do you want to change context? (base id 1)</message>
         <keyword className="Topic" arg="newcontext">Yes</keyword>
         <keyword target="2">No</keyword>
     </State>
 
 	<State id="2">
-        <message>Then we will stay with the base context.</message>
+        <message>Then we will stay with the base context.(base id 2)</message>
         <keyword target="0">Yes</keyword>
         <keyword className="Topic" arg="newcontext">No</keyword>
     </State>
