@@ -60,8 +60,9 @@ public class Bot {
                  //   response = weather.getResponse(match.arg);
                   //  this.level = "1";
                 //}
-                // check for Topic dynamic response
+                // check for Topic dynamic response reset state Id
                 if (match.className.equals("Topic")) {
+                    level = "0";
                     Topic t = conversationContext.getContext().getTopic(match.arg);
                     if (t.isNewTopic()) {
                         System.out.println("the current topic in Topic is  " + t.getCurrentTopic());        
