@@ -55,11 +55,33 @@ public class Bot {
             if (match.className.length() > 0) {
 
                 // check for Weather dynamic response
-                //if (match.className.equals("Weather")) {
-                 //   Weather weather = new Weather();
-                 //   response = weather.getResponse(match.arg);
-                  //  this.level = "1";
-                //}
+                if (match.className.equals("Weather")) {
+                    Weather weather = new Weather();
+                    response = weather.getResponse(match.arg);
+                    this.level = "0";
+                }
+                // check for News dynamic response
+                else if (match.className.equals("News")) {
+                    News news = new News();
+                    response = news.getResponse(match.arg);
+                    this.level = "0";
+                }
+                else if (match.className.equals("Morning")) {
+                    Morning morning = new Morning();
+                    morning.wakeup();
+                }
+                else if (match.className.equals("Afternoon")) {
+                    Afternoon afternoon = new Afternoon();
+                    afternoon.midday();
+                }
+                else if (match.className.equals("Evening")) {
+                    Evening evening = new Evening();
+                    evening.dinner();
+                } 
+                else if (match.className.equals("Night")) {
+                    Night night = new Night();
+                    night.late();
+                }
                 // check for Topic dynamic response
                 if (match.className.equals("Topic")) {
                     level = "0";
