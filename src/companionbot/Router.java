@@ -22,7 +22,7 @@ public class Router {
         System.out.println("from router queue: " + userSpeech + '\n');
         //TODO check the string before handing it to the bot. Method to check repetition. Method to check last utterance.
         // Send the user speech to bot the via via the text field in the gui
-        //Main main= new Main();
+        Main main= new Main();
         main.listen(userSpeech);
         }
         }
