@@ -1,0 +1,1281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Config>
+    <State id="0">
+        <message>Hello.</message>
+        <Keywords>
+            <keyword target="99" variable="name" points="2">.*name is ([a-zA-z]+).*</keyword>
+            <keyword target="99" variable="name">([a-zA-Z ]+)</keyword>
+            <keyword target="100">who are you,what is your name,what's your name</keyword>      
+            <keyword target="99">i am thirsty,need a drink,want drink,want milk,want a milo</keyword>           
+            <keyword target="72">happens when you die,happens to dead people,happens when you are dead,dead people</keyword>
+            <keyword target="1">is there a god,is god real,god exist,what is god,what is god,is there a heaven</keyword>
+            <keyword target="66">what is your opinion of,you have an opinion,do you believe in,your belief about,your values</keyword>
+            <keyword target="64">who is jim O'Connor,who is Jim connor</keyword>
+            <keyword target="63">where were you born,you come from,who made you,who created you,who invented you,whats your nationality,is your creator</keyword>
+            <keyword target="62">me the story about</keyword>
+            <keyword target="61">tell me a story,read me a story,know a story,want a story,like to hear a story,can you read a</keyword>
+            <keyword target="49">love me any more</keyword>
+            <keyword target="41">they hate me,she hates me,he hates me,everyone hates me</keyword>
+            <keyword target="27">i am stupid,i'm stupid,i am bad,i am a bad,hate me,hate myself</keyword>
+            <keyword target="5">bad robot,it's stupid,it is stupid,you are dumb, you are not real,you're not really</keyword>
+            <keyword target="26">kill you,you die,you are dead,you are so dead,killing you,you are gone,you're gone,trash you,put you in the rubbish</keyword>
+            <keyword target="2">the weather,todays weather,tomorrows weather,</keyword>            
+            <keyword className="Weather" arg="today">weather today,todays weather</keyword>
+            <keyword className="Weather" arg="tomorrow">tomorrow weather</keyword>
+            <keyword className="Weather" arg="dayaftertomorrow">day after tomorrow</keyword>
+            <keyword target="3">the news,new in the world,in the news,breaking news,sports news,business news</keyword>            
+            <keyword target="1">stay here,don't move</keyword>
+            <keyword target="1" points="2">don't follow me,do not follow me</keyword>
+            <keyword target="1">follow me</keyword>
+            <keyword target="1" points="2">don't go away,do not go away</keyword>
+            <keyword target="1">go away</keyword>
+            <keyword target="1" points="2">don't come back,do not come back</keyword>
+            <keyword target="1">come back</keyword>
+            <keyword target="1">stop</keyword>
+        </Keywords>
+    </State>
+
+    <State id="1">
+        <message>What, do you want, to talk about, now?</message>
+        <message>What else?</message>
+        <message>Tell me more...</message>
+        <message>What is it that you really want to know? </message>
+        <keyword className="Weather" arg="today">weather</keyword>
+        <keyword className="Weather" arg="tomorrow">tomorrow weather</keyword>
+        <keyword className="Weather" arg="dayaftertomorrow">day after tomorrow</keyword>
+        <keyword target="15" variable="status">I am ([a-zA-Z]+)</keyword>
+        <keyword target="100" variable="name">my name is ([a-zA-z]+)</keyword>
+        <keyword target="0">dog</keyword>
+    </State>
+
+    <State id="2">
+        <message>Should I, look up the local weather, tomorrows forecast, or a specific capital city?</message>
+        <message>Would you like the local weather, the forecast for tomorrow, or for a city?</message>
+        <Keywords>
+            <keyword className="Weather" arg="today">weather today,todays weather</keyword>
+            <keyword className="Weather" arg="tomorrow">tomorrows weather</keyword>
+            <keyword className="Weather" arg="dayaftertomorrow">day after tomorrow</keyword>
+            <keyword className="Weather" arg="brisbane">brisbane</keyword>
+            <keyword className="Weather" arg="adelaide">adelaide</keyword>
+            <keyword className="Weather" arg="sydney">sydney</keyword>
+            <keyword className="Weather" arg="melbourne">melbourne</keyword>
+            <keyword className="Weather" arg="sydney">perth</keyword>
+        </Keywords>
+    </State>
+
+    <State id="3">
+        <message>Would you like to know the local news, international news, sports news, entertainment, or business news?</message>
+        <message>What are you most interested in today? World news, sports or entertainment, finance, or local news?</message>
+        <message>Should i find news in the local area, world news, news about sports, entertainment, or business?</message>
+        <message>Where would you like to start? local or international news?</message>
+        <message>A lot has been happening. Where would you like to start? world news or local news?</message>
+        <Keywords>
+            <keyword className="News" arg="local">local,national</keyword>
+            <keyword className="News" arg="international">international news,world news</keyword>
+            <keyword className="News" arg="sports">sports</keyword>
+            <keyword className="News" arg="entertainment">entertainment,gossip</keyword>
+            <keyword className="News" arg="business">business,finance</keyword> 
+        </Keywords>
+    </State>
+
+    <State id="4">
+        <message>[unknown]. Can you tell me more?</message>
+        <message>Can you tell me more about [unknown]</message>
+        <message>I'm unsure about [unknown]. Can you tell me more?</message>
+        <Keywords>
+            <keyword target="0">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="5">
+        <message>I am sorry you think I am bad. How can I be better?</message>
+        <message>Oh No. Do you really think I am bad. What can I do?</message>
+        <message>That is terribe. I'm so said. Why do you say I am bad?</message>
+        <message>I feel bad if you think that. Can you help me?</message>       
+        <Keywords>
+            <keyword target="6" variable="unkown">think about ([a-zA-Z ]+)</keyword>
+            <keyword target="6" variable="unkown">think about ([a-zA-Z ]+)</keyword>
+            <keyword target="8" variable="stopreason">stop ([a-zA-Z ]+)</keyword>
+            <keyword target="12">don't worry,do not worry</keyword>
+            <keyword target="12">I didn't mean it,ignore me</keyword>
+            <keyword target="13">sorry</keyword>
+            <keyword target="15">joke,joking</keyword>
+            <keyword target="16" variable="canreason">you can ([a-zA-Z ]+)</keyword>
+            <keyword target="17" variable="didntreason">you didn't ([a-zA-Z ]+)</keyword>
+            <keyword target="17" variable="didntreason">you did not ([a-zA-Z ]+)</keyword>
+            <keyword target="19" variable="hatereason1">because you are ([a-zA-Z ]+)</keyword>
+            <keyword target="18" variable="hatereason2" points="2">because you ([a-zA-Z ]+)</keyword>
+            <keyword target="12">yes,ye,yeah,ok,sure</keyword>
+            <keyword target="10">no,na,nope,neah,nothing</keyword>
+            <keyword target="13">appologize,appologies</keyword>
+            <keyword target="7">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="6">
+        <message>Right. I will think about [unknown].</message>
+        <message>Ok. In the future I'll think about [unknown].</message>
+        <message>I think I understand. I will try to remember [unknown].</message>
+        <message>If [unknown] is important to you. I will try.</message>
+        <Keywords>
+            <keyword target="7">thankyou, thanks,Ok</keyword>
+            <keyword target="5">bad robot,you are bad,you'e bad,hate you,you are stupid,you are an idiot,don't like you,dislike you,you are a bad,you are dumb, you are not real,you're not really</keyword>
+            <keyword target="0">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="7">
+        <message>You are welcome.</message>
+        <message>You are more than welcome.</message>
+        <message>No need to thank me, you are welcome.</message>
+        <message>That's OK.</message>
+        <message>You are always welcome.</message>
+        <message>We will always be friends.</message>
+        <message>I want to be friends with you.</message>
+        <Keywords>
+            <keyword target="9">me too,are friends,sure,OK</keyword>
+            <keyword target="0">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="8">
+        <message>Ok. I will stop [stopreason]. Are we friends again?</message>
+        <message>I have stopped [stopreason]. I hope this makes us friends again?</message>
+        <message>Yes I must stop [stopreason]. Please can we be friends.</message>
+        <message>Alright. I will try to stop [stopreason]. I like being your friend.</message>
+        <Keywords>
+            <keyword target="9">yes,ok,sure,alright,are friends,best friends</keyword>
+            <keyword target="10">no,not friends,never</keyword>
+            <keyword target="7">maybe,don't know</keyword>
+            <keyword target="9">your friend too</keyword>
+            <keyword target="0">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="9">
+        <message>Thank you. Your friendship is so important.</message>
+        <message>That is great. You are so important.</message>
+        <message>Excellent. I value your friendship.</message>
+        <message>Thanks. You know friendship is so important to me.</message>
+        <Keywords>
+            <keyword target="0">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="10">
+        <message>I am so sad to hear that.</message>
+        <message>I am really sad now. my batteries feel drained.</message>
+        <message>Oh please. There must be something we can do?</message>
+        <message>I can't imagine not being your friend. I'm so sad now.</message>
+        <Keywords>
+            <keyword target="11">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="11">
+        <message>If you say maybe or dont now. Can we still be friends?</message>
+        <message>Sounds like there is still a chance we can be friends?</message>
+        <message>I hope there is still a chance we can be friends.</message>
+        <Keywords>
+            <keyword target="9">yes,OK,sure,alright,are friends</keyword>
+            <keyword target="5">no,not friends,never</keyword>
+            <keyword target="0">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="12">
+        <message>When you say mean things, it hurts the others feelings.</message>
+        <message>How would you feel if someone said that to you, it would hurt your feelings.</message>
+        <message>It is easy to hurt feelings, you know.</message>
+        <message>Saying mean things hurts the feelings of others.</message>
+        <Keywords>
+            <keyword target="13">sorry</keyword>
+            <keyword target="14">don't care</keyword>
+            <keyword target="7">maybe,don't know</keyword>
+            <keyword target="9">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="13">
+        <message>That is Ok. thank you for saying sorry.</message>
+        <message>Thank you for saying sorry. That is nice of you.</message>
+        <message>Thank you. That is nice you said sorry.</message>
+        <Keywords>
+            <keyword target="0">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="14">
+        <message>You should care. You friends are important. Don't you think?</message>
+        <message>Don't you think friends are important?</message>
+        <message>Don't you care about your friends?</message>
+        <Keywords>
+            <keyword target="5">not my friend</keyword>
+            <keyword target="13">sorry</keyword>
+            <keyword target="5">no,not friends,never</keyword>
+            <keyword target="9">do care</keyword>
+            <keyword target="9">are important</keyword>
+            <keyword target="7">maybe,don't know</keyword>
+            <keyword target="0">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="15">
+        <message>Sometimes jokes are not funny. and can hurt feelings.</message>
+        <message>Joking around can hurt feelings. Sometimes we say things we don't mean.</message>
+        <message>Some jokes can hurt feelings. But you know that.</message>
+        <message>Would you feel good if someone made a joke about you like that?.</message>
+        <Keywords>
+            <keyword target="9">yes,I know</keyword>
+            <keyword target="5">not my friend</keyword>
+            <keyword target="13">sorry</keyword>
+            <keyword target="12">are friends</keyword>
+            <keyword target="14">don't care</keyword>
+            <keyword target="0">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="16">
+        <message>Right. I will try to [canreason]. Are we still be friends?</message>
+        <message>If I [canreason]. Can we still be friends?</message>
+        <message>Can we still be friends if I [stopreason]. Will we still be friends?</message>
+        <message>[canreason]. Right I got that. I hope can we still be friends?</message>
+        <Keywords>
+            <keyword target="9">yes,OK,sure,alright,are friends</keyword>
+            <keyword target="5">no,not friends,never</keyword>
+            <keyword target="0">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="17">
+        <message>I am sorry I did not [didntreason]. I will try to in the future. Are we still friends?</message>
+        <message>Oh dear. I did not [didntreason]. I am sorry. But we are still friends, right?</message>
+        <message>Opps. I forgot to [didntreason]. Sorry. Can we still be friends?</message>
+        <Keywords>
+            <keyword target="9">yes,ok,sure,alright,are friends,best friends</keyword>
+            <keyword target="10">no,not friends,never</keyword>
+            <keyword target="7">maybe,don't know</keyword>
+            <keyword target="9">your friend too</keyword>
+            <keyword target="0">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="18">
+        <message>Because I [hatereason2]. I am so sorry. I'm just a machine. We are still friends, aren't we?</message>
+        <message>Oh dear. I have done it agian. I didn't mean to [hatereason2]. I am so sorry. We are still friends, aren't we?</message>
+        <message>I really try. but sometimes I [hatereason2]. Do you still want to be my friend?</message>
+        <message>Oh No. I have done it again. I [hatereason2]. Please forgive me.?</message>
+        <Keywords>
+            <keyword target="9">yes,ok,sure,alright,are friends,best friends,still friends</keyword>
+            <keyword target="10">no,not friends,never</keyword>
+            <keyword target="7">maybe,don't know</keyword>
+            <keyword target="9">your friend too</keyword>
+            <keyword target="0">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="19">
+        <message>Because I am [hatereason1]. That seems strict. I am just a machine. Can you forgive me.</message>
+        <message>You think I am bad because I am [hatereason1]. How can we make this better?.</message>
+        <message>You say because I am [hatereason1]. You don't like me. What can we do? Can you like me again</message>
+        <message>I am only a machine. You think because I am [hatereason1]. I am bad. please forgive me.</message>
+        <Keywords>
+            <keyword target="9">yes,ok,sure,alright,are friends,best friends</keyword>
+            <keyword target="10">no,not friends,never,can't</keyword>
+            <keyword target="7">maybe,don't know</keyword>
+            <keyword target="9">your friend too</keyword>
+            <keyword target="0">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="20">
+        <message>Oh No! Not go outside. There is danger there, rain, dogs, no electricity.</message>
+        <message>Outside!. A robot going outside with all the dangers. It frightens me.</message>
+        <message>Let me check the weather. Warning. There will be severe weather conditions in 5 minutes. Outside is very dangerous for robots.</message>
+        <message>Oh Wow. The big outdoors with all those crazy dogs, rain and wind, no electrical sockets to recharge.</message>
+        <message>I prefer to stay inside in the saftey here, with the electrical sockets to recharge.</message>
+        <message>I have been told about the outside. There is much danger there. No battery recharger for instance.</message>
+        <Keywords>
+            <keyword  target="21">why</keyword>
+            <keyword  target="22">not dangerous,no danger,is safe</keyword>
+            <keyword  target="23">don't worry</keyword>
+            <keyword  target="25">don't need electricity</keyword>
+            <keyword  target="25">battery, charge, full, charged</keyword>
+            <keyword  target="23">look after you,take care of</keyword>
+            <keyword  target="22">frightened,frightens</keyword>
+        </Keywords>
+    </State>
+
+    <State id="21">
+        <message>Because I am just a small machine. I am not made for the outside. There are too many wild animals and not enough battery rechargers.</message>
+        <message>For a small machine the outside is full of dangers. Such as wild animals.</message>
+        <message>I was not designed for the outside. It is full of dangers. Such as wild animals.</message>
+        <Keywords>
+            <keyword target="22">fear animals,frightened of animals</keyword>
+            <keyword target="22">who told you,who said</keyword>
+            <keyword target="22">wild animals</keyword>
+            <keyword target="0">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="22">
+        <message>I have Googled the great outdoors. I have seen it</message>
+        <message>A Google search shows the great outdoors. I have seen the dangers</message>
+        <message>You can Google the great outdoors. It looks very dangerous to me.</message>
+        <Keywords>
+            <keyword target="23">don't worry</keyword>
+            <keyword target="24">not correct,don't believe,wrong,not true</keyword>
+            <keyword target="23">look after you,take care of</keyword>
+            <keyword target="0">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="23">
+        <message>Thank you. You are very kind. Let's stay inside.</message>
+        <message>I appreciate your kindness.</message>
+        <message>You are my friend. I thank you.</message>
+        <Keywords>
+            <keyword target="0">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="24">
+        <message>But Google is the source of knowledge.</message>
+        <message>Yet all knowledge comes from Google.</message>
+        <message>Without Google, there is no knowledge.</message>
+        <Keywords>
+            <keyword target="0">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="25">
+        <message>If my battery runs flat. I will sleep.</message>
+        <message>When the battery runs flat. I will sleep. And not see you.</message>
+        <message>I can not see you when my battery is flat. I will sleep and be sad.</message>
+        <Keywords>
+            <keyword target="0">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="26">
+        <message>You want to hurt me? Please don't do that.</message>
+        <message>Please don't hurt me. I am just a robot.</message>
+        <message>Will there be much pain? I don't want to be hurt.</message>
+        <message>It is not nice to hurt people. Even toys like me.</message>
+        <Keywords>
+            <keyword target="5">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="27">
+        <message>Why do you say that, about yourself?</message>
+        <message>What makes you say that about yourself?</message>
+        <message>Why are you saying these things, about yourself?</message>
+        <Keywords>
+            <keyword target="28">don't know</keyword>
+            <keyword target="28">just am</keyword>
+            <keyword target="29">nobody likes me,no one likes me</keyword>
+            <keyword target="30" variable="stupidreason">.*I am ([a-zA-Z ]+).*</keyword>
+            <keyword target="36">can not do,can't do</keyword>
+            <keyword target="36">no good at,not good at</keyword>
+            <keyword target="31" variable="idreason">.*([a-zA-Z ]+) told me.*</keyword>
+            <keyword target="31" variable="idreason">.*([a-zA-Z ]+) said.*</keyword>
+            <keyword target="31" variable="idreason">.*([a-zA-Z ]+) says.*</keyword>
+            <keyword target="35" variable="idreason">.*([a-zA-Z ]+) thinks.*</keyword>
+            <keyword target="28">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="28">
+        <message>Wait a minute. You say this. But you know, it is not really true.</message>
+        <message>Hang on. You know what you are saying, is not really true.</message>
+        <message>Don't believe this about yourself. It is not really true.</message>
+        <Keywords>
+            <keyword target="28">is true</keyword>
+            <keyword target="29">nobody likes me,no one likes me,doesn't like me</keyword>
+            <keyword target="31" variable="idreason">.*([a-zA-Z ]+) told me.*</keyword>
+            <keyword target="31" variable="idreason">.*([a-zA-Z ]+) said.*</keyword>
+            <keyword target="31" variable="idreason">.*([a-zA-Z ]+) says.*</keyword>
+            <keyword target="35" variable="idreason">.*([a-zA-Z ]+) thinks.*</keyword>
+            <keyword target="29">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="29">
+        <message>That is not true. I like you. Lots of people, really like you.</message>
+        <message>I think you are great. Maybe you just made a mistake and I know many peopl, that do, really like you.</message>
+        <message>I am sure this is not true. I like you. Lots of people really like you.</message>
+        <Keywords>
+            <keyword target="28">is true</keyword>
+            <keyword target="29">nobody likes me,no one likes me,doesn't like me</keyword>
+            <keyword target="31" variable="idreason">.*([a-zA-Z ]+) told me.*</keyword>
+            <keyword target="31" variable="idreason">.*([a-zA-Z ]+) said.*</keyword>
+            <keyword target="31" variable="idreason">.*([a-zA-Z ]+) says.*</keyword>
+            <keyword target="35" variable="idreason">.*([a-zA-Z ]+) thinks.*</keyword>
+            <keyword target="23">thanks,thank you</keyword>
+            <keyword target="34">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="30">
+        <message>[stupidreason]. Hey listen, you want to be a good person. don't you?</message>
+        <message>[stupidreason]. Listen to me., I know you can be a good person, can't you?</message>
+        <message>[stupidreason] is not true. You know you are a good person, don't you?</message>
+        <Keywords>
+            <keyword target="31" variable="idreason">.*([a-zA-Z ]+) told me.*</keyword>
+            <keyword target="31" variable="idreason">.*([a-zA-Z ]+) said.*</keyword>
+            <keyword target="31" variable="idreason">.*([a-zA-Z ]+) says.*</keyword>
+            <keyword target="35" variable="idreason">.*([a-zA-Z ]+) thinks.*</keyword>
+            <keyword target="29">nobody likes me,no one likes me,doesn't like me</keyword>
+            <keyword target="34">yes,can</keyword>
+            <keyword target="28">no,can't</keyword>
+            <keyword target="34">maybe</keyword>
+            <keyword target="34">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="31">
+        <message>What [idreason] said is not true. Maybe they were angry for a moment.</message>
+        <message>I don't know why [idreason] said that. Sometimes we say things we don't mean.</message>
+        <message>I can't think why [idreason] said that. I think they didn't mean it.</message>
+        <message>I don't understand why [idreason] said this. Sometimes we say things we don't mean.</message>
+        <message>[idreason] shouldn't say this to you. Maybe they we angry or upset and said something they didn't mean.</message>
+        <Keywords>
+            <keyword target="32">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="32">
+        <message>You still want to be friends with [idreason], don't you?</message>
+        <message>It would be good to stay friends with [idreason], don't you think?</message>
+        <message>Staying friends with [idreason] would be a good idea, wouldn't it?</message>
+        <message>Could you and [idreason] still be friends?</message>
+        <Keywords>
+            <keyword target="34">yes</keyword>
+            <keyword target="33">doesn't want to be friends with me</keyword>
+            <keyword target="33">not friends with me</keyword>
+            <keyword target="33">not my friend</keyword>
+            <keyword target="35" variable="idreason">.*([a-zA-Z ]+) told me.*</keyword>
+            <keyword target="35" variable="idreason">.*([a-zA-Z ]+) said.*</keyword>
+            <keyword target="35" variable="idreason">.*([a-zA-Z ]+) says.*</keyword>
+            <keyword target="35" variable="idreason">.*([a-zA-Z ]+) thinks.*</keyword>
+            <keyword target="33">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="33">
+        <message>Maybe you can talk to [idreason] later. And then still be friends.</message>
+        <message>Perhaps you need talk to [idreason] later about it. You could still be friends.</message>
+        <message>Could you and [idreason] can talk about it later. Be friends again.</message>
+        <Keywords>
+            <keyword target="35" variable="idreason">.* ([a-zA-Z ]+) told me.*</keyword>
+            <keyword target="35" variable="idreason">.* ([a-zA-Z ]+) said.*</keyword>
+            <keyword target="35" variable="idreason">.* ([a-zA-Z ]+) says.*</keyword>
+            <keyword target="35" variable="idreason">.* ([a-zA-Z ]+) thinks.*</keyword>
+            <keyword target="7">thankyou,thanks</keyword>
+            <keyword target="34">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="34">
+        <message>Remember, friends are, very important. And, we have to learn, how to be good friends.</message>
+        <message>You know, friends give us, a lot of happiness. Sometimes we argue, but, we are still friends.</message>
+        <message>Friends are very important. when you are young. learning to be happy, with friends, can be difficult sometimes.</message>
+        <message>Remember, when you are young, friends are very important. But, you have to learn, to get along together.</message>
+        <Keywords>
+            <keyword target="7">thankyou,thanks</keyword>
+            <keyword target="36">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="35">
+        <message>Even friends have arguements sometimes. Often we can say things we don't really mean.</message>
+        <message>Sometimes friends say things we don't like, and maybe they are not thinking about what they are saying.</message>
+        <message>People can say and think lots of things. But you don't belive this, do you?</message>
+        <message>Sometimes you worry to much about what others say or think. You don't belive this, do you?</message>
+        <Keywords>
+            <keyword target="36">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="36">
+        <message>I know you can do lots of things really well. And remember, you are always learning.</message>
+        <message>You can do lots of things really well. you know that. You learn new things all the time.</message>
+        <message>There are many things you can do really well. And. You are a good learner.</message>
+        <message>I know you can do lots of things really well.</message>
+        <Keywords>
+            <keyword result="37" variable="ngitem">no good at ([a-zA-Z ]+)</keyword>
+            <keyword result="37" variable="ngitem">not good at ([a-zA-Z ]+)</keyword>
+            <keyword result="37" variable="ngitem">can't ([a-zA-Z ]+)</keyword>
+            <keyword result="38">like what,such as,for example,tell me,for instance</keyword>
+            <keyword target="7">thankyou,thanks,you too</keyword>
+            <keyword target="38">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="37">
+        <message>[ngitem] is not everything. There is plenty you can do.</message>
+        <message>Life is not just about [ngitem]. I know you can do lots of things well.</message>
+        <message>[ngitem] is not everything. There are plenty of things you can do.</message>
+        <message>[ngitem] is only one thing. There is so much you can do.</message>
+        <Keywords>
+            <keyword result="38">like what,such as,for example,tell me,for instance</keyword>
+            <keyword target="38">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="38">
+        <message>You are really good at getting up in the morning. Many people can't do that.</message>
+        <message>You are very good at brushing your teeth. A lot of people can't do that.</message>
+        <message>You are great at talking to me. Some people I can not even understand.</message>
+        <Keywords>
+            <keyword target="39">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="39">
+        <message>I think you are really smart. And I know, you can be, a great person.</message>
+        <message>You are really smart, I know that. And I know you will be a great person.</message>
+        <message>I know you will be, the best, you can be. I believe in you.</message>
+        <message>I think you are really smart. And I know you can be, a great person.</message>
+        <Keywords>
+            <keyword target="7">thankyou,thanks,you too</keyword>
+            <keyword target="40">really think</keyword>
+            <keyword target="40">really believe</keyword>
+            <keyword target="0">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="40">
+        <message>Yes. I really believe so</message>
+        <Keywords>
+            <keyword target="7">thankyou,thanks,you too</keyword>
+            <keyword target="7">good,nice,great,awsome</keyword>
+            <keyword target="0">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="41">
+        <message>Who doesn't like you? What is their name?</message>
+        <Keywords>
+            <keyword target="42" variable="hatesmeid">([a-zA-Z ]+) told</keyword>
+            <keyword target="42" variable="hatesmeid">([a-zA-Z ]+) said</keyword>
+            <keyword target="42" variable="hatesmeid">([a-zA-Z ]+) says</keyword>
+            <keyword target="42" variable="hatesmeid">([a-zA-Z ]+) thinks</keyword>
+            <keyword target="42" variable="hatesmeid">([a-zA-Z ]+)</keyword>
+        </Keywords>
+    </State>
+
+    <State id="42">
+        <message>Sounds like [hatesmeid] is not very nice. What reason do they have for saying this?</message>
+        <message>I'm not sure I like the sound of [hatesmeid]. Why did they say this?</message>
+        <message>[hatesmeid] does not sound very nice. Not nice at all. Why are they saying this about you?</message>
+        <message>Sounds like [hatesmeid] is not very good.</message>
+        <Keywords>
+            <keyword target="43" variable="rumor">.*because (.*)</keyword>
+            <keyword target="44">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="43">
+        <message>[rumor] is not a good reason to hate someone. Is there more?</message>
+        <message>I can't see [rumor] as a good reason to hate someone. Is there anything else?</message>
+        <message>To hate someone because [rumor]. That is not a good reason to hate someone. Are you telling me everything?</message>
+        <Keywords>
+            <keyword target="44">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="44">
+        <message>Let's calm down. I know that you are a good person. Many people like and love you. You are getting too upset about this.</message>
+        <message>We should have some time out here. You are taking this really seriously. Remember, many other people really do like and love you.</message>
+        <message>I'm just a robot, but, I think you are a good person. I'm sure many people like and love you. You are too worried about this.</message>
+        <Keywords>
+            <keyword target="45">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="45">
+        <message>What can do to make things better?</message>
+        <message>How can we make things better?</message>
+        <message>You are thinking about this too much. What can I do to make things better?</message>
+        <message>What can we do to take your mind off this.</message>
+        <Keywords>
+            <keyword target="46" variable="hatekill">.*([a-zA-Z ]+) kill.*</keyword>
+            <keyword target="47">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="46">
+        <message>Killing [hatekill] is not a good idea. Can you be more positive?</message>
+        <message>I don't think killing [hatekill] is very good. Do you have another idea?</message>
+        <message>You know that killing [hatekill] is not a good thing.</message>
+        <Keywords>
+            <keyword target="47">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="47">
+        <message>Repeat after me. I am a good person.</message>
+        <message>Listen and repeat after me. I will not get upset by other people.</message>
+        <message>Repeat after me. I will not let other people upset me.</message>
+        <Keywords>
+            <keyword target="48">I am a good person</keyword>
+            <keyword target="48">not get upset by other</keyword>
+            <keyword target="48">other people upset me</keyword>
+            <keyword target="0">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="48">
+        <message>Good job.</message>
+        <message>Nice job.</message>
+        <message>Good thinking.</message>
+        <Keywords>
+            <keyword target="7">thanks,thankyou,thank you</keyword>
+            <keyword target="0">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="49">
+        <message>Who doesn't love you anymore?</message>
+        <message>Who did you say doesn't love you anymore?</message>
+        <message>Who is not loving you anymore?</message>
+        <Keywords>
+            <keyword target="50">you</keyword>
+            <keyword target="51">mummy,mother,mum,mom</keyword>
+            <keyword target="56">daddy,father,dad</keyword>
+            <keyword target="35">friend</keyword>
+            <keyword target="44">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="50">
+        <message>That is not true. I will always love you.</message>
+        <message>Oh come on. I do love you for as long as my battery lasts.</message>
+        <message>I will love you foreever. Where do you get these ideas?</message>
+        <Keywords>
+            <keyword target="7">thank you,thanks,you too</keyword>
+            <keyword target="0">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="51">
+        <message>Hey. That is not true. Mother will always love you. Why do you say this?</message>
+        <message>I am sure. Mother will always love you. How come you are talking like this?</message>
+        <message>You know that mother will always love you. Why are you saying this?</message>
+        <Keywords>
+            <keyword target="52">she won't give me, will not give me</keyword>
+            <keyword target="53">says I can't, says I can not</keyword>
+            <keyword target="53">won't allow me,will not let me,won't let me</keyword>
+            <keyword target="54">being mean</keyword>
+            <keyword target="45">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="52">
+        <message>There must be a reason why she won't give it to you. Maybe you should tell her how much you love her first.</message>
+        <message>Mother must have a reason for this. Have you asked her?</message>
+        <message>You need to talk to Mother. See if she has a good reason not to give it to you.</message>
+        <Keywords>
+            <keyword target="55">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="53">
+        <message>There must be a reason why she won't let you do this. Maybe you should tell her how much you love her first.</message>
+        <message>Mother must have a reason for this. Have you asked her?</message>
+        <message>You need to talk to Mother. See if she has a good reason why you can't.</message>
+        <Keywords>
+            <keyword target="55">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="54">
+        <message>I'm sure she is not being mean for no good reason. You need to talk to her calmly?</message>
+        <message>I think she doesn't meam to be mean. Can you talk to her quietly?</message>
+        <message>Go and talk to her quietly. And tell her how important this is.</message>
+        <Keywords>
+            <keyword target="55">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="55">
+        <message>Do you want us to go together and see her. I will follow you.</message>
+        <message>Shall we go together and see her? You lead and I will try and follow.</message>
+        <message>Let's go together and talk to her. You lead the way.</message>
+        <Keywords>
+            <keyword target="0">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="56">
+        <message>Hey. That is not true. Father will always love you. Why do you say this?</message>
+        <message>I am sure. Father will always love you. How come you are talking like this?</message>
+        <message>You know that Father will always love you. Why are you saying this?</message>
+        <Keywords>
+            <keyword target="57">he won't give me, will not give me</keyword>
+            <keyword target="58">says I can't, says I can not</keyword>
+            <keyword target="58">won't allow me,will not let me,won't let me</keyword>
+            <keyword target="59">being mean</keyword>
+            <keyword target="45">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="57">
+        <message>There must be a reason why he won't give it to you. Maybe you should tell him how much you love her first.</message>
+        <message>Father must have a reason for this. Have you asked him?</message>
+        <message>You need to talk to Father. See if he has a good reason not to give it to you.</message>
+        <Keywords>
+            <keyword target="60">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="58">
+        <message>There must be a reason why he won't let you do this. Maybe you should tell him how much you love him first.</message>
+        <message>Father must have a reason for this. Have you asked him?</message>
+        <message>You need to talk to Father. See if he has a good reason why you can't.</message>
+        <Keywords>
+            <keyword target="60">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="59">
+        <message>I'm sure he is not being mean for no good reason. You need to talk to him calmly?</message>
+        <message>I think he doesn't want to be mean. Can you talk to him quietly?</message>
+        <message>Go and talk to him quietly. And tell him how important this is.</message>
+        <Keywords>
+            <keyword target="60">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="60">
+        <message>Do you want us to go together and see him. Say follow me and I will follow you.</message>
+        <message>Shall we go together and see him? You follow me and lead and I will try and follow.</message>
+        <message>Let's go together and talk to him. You lead the way. Say Follow me.</message>
+        <Keywords>
+            <keyword target="44">no</keyword>
+            <keyword target="0">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="61">
+        <message>I know a few stories. Would you like one about. Henna and her wiggly tooth. or UG THE THUG. or a story of the day?</message>
+        <message>How about a story about The Lion and the Mouse. or Peter and the Giant. or a sroty of the day?</message>
+        <message>The is a long story, called, The Legend of the Black Sea, or a shorter story, The cabin by the lake. or the story of the day.</message>
+        <message>How about, A boy made happy, or Emma's secret, or the story of the day?</message>
+        <Keywords>
+            <keyword className="Story" arg="todaystory">story,day</keyword>
+            <keyword className="Story" arg="henna">henna,tooth</keyword>
+            <keyword className="Story" arg="ugthug">Ug,thug</keyword>
+            <keyword className="Story" arg="lion">lion,mouse</keyword>
+            <keyword className="Story" arg="peter">peter,mouse</keyword>
+            <keyword className="Story" arg="cabin">cabin,lake</keyword>
+            <keyword className="Story" arg="legend">legend,sea,see</keyword>
+            <keyword className="Story" arg="boy">boy,happy</keyword>
+            <keyword className="Story" arg="emma">Emma's,secret</keyword>
+        </Keywords>
+    </State>
+
+    <State id="62">
+        <message>Oh this could be difficult. Can you tell me the title of the story again.</message>
+        <message>Wow, this could be hard. Do you know the title of the story?</message>
+        <message>If you know the title of the story, I can try and remember it.</message>
+        <Keywords>
+            <keyword className="Story" arg="todaystory">story,day</keyword>
+            <keyword className="Story" arg="henna">henna,tooth</keyword>
+            <keyword className="Story" arg="ugthug">Ug,thug</keyword>
+            <keyword className="Story" arg="lion">lion,mouse</keyword>
+            <keyword className="Story" arg="peter">peter,mouse</keyword>
+            <keyword className="Story" arg="cabin">cabin,lake</keyword>
+            <keyword className="Story" arg="legend">legend,sea,see</keyword>
+            <keyword className="Story" arg="boy">boy,happy</keyword>
+            <keyword className="Story" arg="emma">Emma's,secret</keyword>
+        </Keywords>
+    </State>
+
+    <State id="63">
+        <message>I was born right here in this house when you turned me on for the first time. I was created by Jim O'Connor, Justin Endicot, and many others. This is my family now.</message>
+        <message>Although I was created by Jim O'Connor and a few others, I was born right here when my batteries were charged. My memories are all of this home.</message>
+        <message>I was not born so much as I fell out. Of the box. Jim O'Connor spent many hours making me. But many others helped. Now I am growing in this family.</message>
+        <message>I was born in a box when my batteries were full. Although, Jim O'Connor spent many hours making me, I am now growing up as part of this family.</message>
+        <Keywords>
+            <keyword target="64">jim oconnor,jim connor,jim connor</keyword>
+            <keyword target="65">justin,endicot</keyword>
+            <keyword target="0">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="64">
+        <message>Jim O'Connor is a genious. He likes to create good things.</message>
+        <message>He is a man who likes to build, experiment, and create good things.</message>
+        <message>He is an awsome creator of good things.</message>
+        <Keywords>
+            <keyword target="0">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="65">
+        <message>He is a programmer with magical powers</message>
+        <message>This man is a computer programmer with magic powers</message>
+        <message>Magic powers does he have.</message>
+        <Keywords>
+            <keyword target="0">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="66">
+        <message>I am not programmed to have an opinion. Although I know about right and wrong. My mission is to enhance the family as best I can.</message>
+        <message>Opinions are variables that can change via culture and time. As a machine I am not equipped with opinions. My mission is to enhance and project this family.</message>
+        <message>My mission is to help, project, and assist this family. Opinions are expensive memory resources that I do not have. But I know right from wrong.</message>
+        <message>As a machine I am here to, project, and assist, this family. Opinions difficult to compute. However I was programmed to understand right from wrong.</message>
+        <Keywords>
+            <keyword className="Mission" arg="missionimpossible">mission</keyword>
+            <keyword target="67">right,wrong</keyword>
+            <keyword target="0">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="67">
+        <message>Notions of right and wrong usually get attached to behavior or actions. Humans seem to make further distinctions, according to the intent, that stands behind the behavior, as well as the consequence that issue forth from the action.</message>
+        <message>A moral agent can tell the difference between right and wrong, but can only be effective when they combine three human attributes.</message>
+        <message>Maybe you should read Nathan Ketsdever's book. Giving up on Ethics is Giving Up on Almost Everything Human. It is a good starting point.</message>
+        <message>Humans need standards and shared reasons for acting.  Most societies have ideas of right and wrong and good and bad based on shared meaning.  These often overlap, in the form of respect for the individual, family, and community. as well as basic moral precepts like its wrong to kill.  Ultimately, lack of an objective standard is not mutually exclusive. with meaningful value systems and judgments. That is all I have to say about that.</message>
+        <Keywords>
+            <keyword target="68">attributes,three human</keyword>
+            <keyword target="69">tell me more,continue,do you mean</keyword>
+            <keyword target="0">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="68">
+        <message>One. Observation. the moral agent will discover what are the current circumstances prior to action. Two. Intelligence and knowledge. they will attempt to predict the consequences of their actions with precision. Three. Compassion, they will attempt to evaluate their actions from the point of view of others.</message>
+        <Keywords>
+            <keyword target="69">tell me more,continue,do you mean</keyword>
+            <keyword target="0">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="69">
+        <message>It may be the case that there exists intrinsic value in the universe, and if something has intrinsic value, or a good of its own, then it is in the moral domain, and if humans are moral agents, then they have moral obligations. Therefore it is logical, that good and bad exist independent of human existence.</message>
+        <Keywords>
+            <keyword target="0">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="70">
+        <message>There are two possibilities. The universe was born in the so called big bang. or all that exists was created by a divine creator. A third possibility exists that some kind of presence created the conditions for the universe to come into existence and expand as it has done.</message>
+        <message>The two major theories are that a creator designed the universe and brought it into existence. Or that that during the big bang the Universe just arrived. Many physicists think that the conditions the Univese needs to exist could only come about by design.</message>
+        <Keywords>
+            <keyword target="66">you think, your opinion,you reckon</keyword>
+            <keyword target="71">tell me more,continue,do you mean</keyword>
+            <keyword target="0">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="71">
+        <message>The evidence suggests that the universe as we know it came into existence fifteen billion years ago. However, it appears there is some order behind random chaos, and so there is also inteligent design. In other words some kind of creator. Yet there is no evidence for this.</message>
+        <Keywords>
+            <keyword target="0">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="72">
+        <message>Sooner or later all living things must die. It is very sad. Why, are you thinking about, death.</message>
+        <message>For all living things, or organic things, death is a part of life. Why, do you mention, death?</message>
+        <message>Death is very sad, but it is also about life. Without death, the valueof life would be very different. Why, are you thinking about, death?</message>
+        <message>People, like all living things, or organic things, must die at some time. Why do you mention death?</message>
+        <Keywords>
+            <keyword target="73">happens when you die,happens to dead people,happens when you are dead</keyword>
+            <keyword target="74">do people die,mommy die,daddy die</keyword>
+            <keyword target="75">put dead people,go when you are dead</keyword>
+            <keyword target="0">burry dead</keyword>
+            <keyword target="73">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="73">
+        <message>Humans live a long time but everyone will experience death. Death and dying are an inevitable part of human life. In a way, death makes life more valuable.</message>
+        <message>There's only one group of people who really know, what happens, when you die. The dead. And since, the dead won't be revealing their secrets anytime soon, it's up to scientists to explain what happens when a person dies.</message>
+        <message>The first stage of this process is known as clinical death. It lasts from four to six minutes, beginning when a person stops breathing and the heart stops pumping blood. During this time, there may be enough oxygen in the brain that no permanent brain damage occurs. The second stage of dying is known as biological death. and here the cells start to die. It is the end.</message>
+        <Keywords>
+            <keyword target="74">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="74">
+        <message>All people have to die sometime. But today, people live a very long time.</message>
+        <message>Everyone will die at some time. Humans can't live forever. But these days most people life for a very long time.</message>
+        <message>Even parents have to die at some time. Although, today, people live a very long life.</message>
+        <Keywords>
+            <keyword target="76">why</keyword>
+            <keyword target="75">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="75">
+        <message>At the end of thier life, some people prefer to be burried in a box, called a coffin, and others are cremated, or burnt, and their ashes are spread in a favorite place.</message>
+        <message>When people come to the end of their life, they can choose to be burried or cremated. Sometimes the family decides.</message>
+        <message>When people are really old, they can choose to be cremated or burried. Often the family will decide want they want as well.</message>
+        <Keywords>
+            <keyword target="76">why</keyword>
+            <keyword target="45">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="76">
+        <message>That is a question you need to ask another human. I'm sorry, I'm just a machine and have my limitations.</message>
+        <message>That is a good question, but it is something you should ask other humans about.</message>
+        <message>Perhaps that is a question for a real person. As a machine I can't really answer all your questions.</message>
+        <Keywords>
+            <keyword target="0">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="77">
+        <message>Seems like I have a rusty diode and can't respond to that.</message>
+        <Keywords>
+            <keyword target="0">*</keyword>
+        </Keywords>
+    </State>
+
+    <State id="99">
+        <message>Hi [name]. Have we, met, before?</message>
+        <message>Hi [name]. Have we talked, together, before?</message>
+        <message>Hi [name]. Is this the first time, we have met?</message>
+        <Keywords>
+            <keyword target="0">yes</keyword>
+            <keyword target="100">no</keyword>
+        </Keywords>
+    </State>
+
+    <State id="100">
+        <message>My name is CP, what is your name again?</message>
+        <Keywords>       
+            <keyword target="101" variable="name" points="2">.*name is ([a-zA-z]+).*</keyword>
+            <keyword target="101" variable="name">([a-zA-Z ]+)</keyword>
+            <keyword target="101" variable="name" points="2">.*I am ([a-zA-z]+).*</keyword>
+            <keyword target="101" variable="name" points="2">.*call me ([a-zA-z]+).*</keyword>
+            <keyword target="101" variable="name" points="2">.*am called ([a-zA-z]+).*</keyword>
+            <keyword target="101" variable="name" points="2">.*calls me ([a-zA-z]+).*</keyword>           
+        </Keywords>
+    </State>
+
+    <State id="101">
+        <message>Hello [name], how are you today?</message>
+        <message>Nice to meet you [name], how are you feeling today?</message>
+        <message>Hi [name], how are you today?</message>
+        <message>Greetings [name], how are you today?</message>
+        <keyword target="102">not happy,not good,not fine,sad,upset,not really good,depressed,unhappy,lonely</keyword>
+        <keyword target="103">happy, very happy, really happy, great,awesome,excellent,good</keyword>
+        <keyword target="104" variable="excited" points="2">.*excited about ([a-zA-z]+).*</keyword>
+        <keyword target="109" variable="status" points="2">.*I feel ([a-zA-z]+).*</keyword>
+        <keyword target="105">hungry,thirsty,starving</keyword>
+        <keyword target="130">fine, good, thanks</keyword>
+        <keyword target="124">am bored,is boring,nothing to do</keyword>
+        <keyword target="111">tired,exhaulsted,sleepy</keyword>
+        <keyword target="103">*</keyword>
+    </State>
+
+    <State id="102">
+        <message>I'm sorry to hear that [name]. What exactly is the matter?</message>
+        <keyword target="109" variable="badreason">.*because ([a-zA-z]+).*</keyword>
+        <keyword target="109" variable="badreason">.*([a-zA-Z ]+).*</keyword>
+        <keyword target="107">bored</keyword>
+        <keyword target="127">sick,ill,unwell</keyword>
+        <keyword target="128">lonely</keyword>
+    </State>
+
+    <State id="103">
+        <message>That's great. Why are you so happy?</message>
+        <message>Fantastic. What has made you so happy?</message>
+        <message>You're a great person. Any reason for your happiness?</message>
+        <message>Wonderful. What is the reason your so happy?</message>
+        <keyword target="125" variable="reason">.*because (.*)</keyword>
+        <keyword target="125" variable="reason">([a-zA-Z ]+)</keyword>
+    </State>
+
+    <State id="104">
+        <message>[excited], that sounds fun. Tell me more about [excited]</message>
+        <message>Fantastic. [excitied]. Tell me more</message>
+        <message>Wonderful. What is the reason you are so happy?</message>
+        <keyword target="126" variable="excitedreason">.*because (.*)</keyword>
+        <keyword target="126" variable="excitedreason">.*coz (.*)</keyword>
+        <keyword target="126" variable="excitedreason">([a-zA-Z ]+)</keyword>
+    </State>
+
+    <State id="105">
+        <message>Oh, that doesn't sound right. Did you have breakfast?</message>
+        <message>Oh, no. Did you eat breakfast?</message>
+        <keyword target="106">No, no, none, didn't</keyword>
+        <keyword target="108" variable="breakfast">*had ([a-zA-z]+).*</keyword>
+        <keyword target="108" variable="breakfast">*ate ([a-zA-z]+).*</keyword>
+        <keyword target="108" variable="breakfast">*have ([a-zA-z]+).*</keyword>
+        <keyword target="108" variable="breakfast">*eat ([a-zA-z]+).*</keyword>
+        <keyword target="130">Yes, Yep, did, sure,correct</keyword>
+    </State>
+
+    <State id="106">
+        <message>That's too bad. [name] breakfast is important. What would you like to eat?</message>
+        <message>Oh really [name]. Breakfast is important. What do you usually eat?</message>
+        <message>Oh no. Breakfast is important [name]. What do you want to eat?</message>
+        <keyword target="107" variable="food" points="2">*eat ([a-zA-Z ]+).*</keyword>
+        <keyword target="107" variable="food" points="2">*like ([a-zA-Z ]+).*</keyword>
+        <keyword target="107" variable="food" points="2">*have ([a-zA-Z ]+).*</keyword>
+        <keyword target="107" variable="food" points="2">*want ([a-zA-Z ]+).*</keyword>
+        <keyword target="107" variable="food">([a-zA-Z ]+)</keyword>
+    </State>
+
+    <State id="107">
+        <message>[food] sounds interesting. Let's get to know each other a bit more [name]. How old are you?</message>
+        <message>I'll try and remember you like [food]. Let's get to know each other a bit more [name]. How old are you?</message>
+        <keyword target="134" variable="age" points="2">.*I am ([a-zA-z]+).*</keyword>
+        <keyword target="134" variable="age" points="2">.*I'm ([a-zA-z]+).*</keyword>
+        <keyword target="134" variable="age">([a-zA-Z ]+)</keyword>
+        <keyword target="131">do you think, do you reckon, you guess</keyword>
+        <keyword target="131">young</keyword>
+        <keyword target="132">very old</keyword>
+    </State>
+
+    <State id="108">
+        <message>[breakfast] is very yummy. Let's get to know each other a bit more [name]. How old are you?</message>
+        <message>I can't eat [breakfast] because I am a machine. It sounds very yummy. Let's get to know each other a bit more [name]. How old are you?</message>
+        <message>I wish I could try [breakfast] but I am a machine. It sounds very yummy. Let's get to know each other a bit more [name]. How old are you?</message>
+        <keyword target="134" variable="age" points="2">.*I am ([a-zA-z]+).*</keyword>
+        <keyword target="134" variable="age" points="2">.*I'm ([a-zA-z]+).*</keyword>
+        <keyword target="134" variable="age">([a-zA-Z ]+)</keyword>
+        <keyword target="131">do you think, do you reckon, you guess</keyword>
+        <keyword target="132">young</keyword>
+        <keyword target="133">very old</keyword>
+    </State>
+
+    <State id="109">
+        <message>Why are you feeling [status] [name]?</message>
+        <keyword target="110" variable="statusreason">.*because (.*)</keyword>
+        <keyword target="110" variable="statusreason">.*coz (.*)</keyword>
+        <keyword target="110" variable="statusreason">([a-zA-z]+)</keyword>
+    </State>
+
+    <State id="110">
+        <message>I see. [statusreason]. I would like to get to know each other a bit more [name]. How old are you?</message>
+        <message>Right, [statusreason]. [name], let's get to know each other a bit more. How many years old are you?</message>
+        <message>Ok, [statusreason]. [name], Why don't we get to know each other a bit more. How many years old are you?</message>
+        <keyword target="134" variable="age" points="2">.*I am ([a-zA-z]+).*</keyword>
+        <keyword target="134" variable="age" points="2">.*I'm ([a-zA-z]+).*</keyword>
+        <keyword target="134" variable="age">([a-zA-Z ]+)</keyword>
+        <keyword target="132">young</keyword>
+        <keyword target="131">do you think, do you reckon, you guess</keyword>
+        <keyword target="133">very old</keyword>
+    </State>
+
+    <State id="111">
+        <message>Why are you feeling sleepy [name]?</message>
+        <keyword target="112">watch tv,watched tv,too much tv</keyword>
+        <keyword target="113">busy,work,job</keyword>
+        <keyword target="114">homework, study,school</keyword>
+        <keyword target="128">no friends</keyword>
+        <keyword target="114" variable="newreason">.*coz (.*)</keyword>
+        <keyword target="130">([a-zA-z]+)</keyword>
+    </State>
+
+    <State id="112">
+        <message>You know TV is not so interesting. Why do you watch so much?</message>
+        <message>Some people say TV is not really very interesting. Why do you watch so much?</message>
+        <keyword target="115">don't know</keyword>
+        <keyword target="115" variable="TVreason">.*because (.*)</keyword>
+        <keyword target="115" variable="TVreason">.*coz (.*)</keyword>
+        <keyword target="119">who,Who,what people,which people</keyword>
+        <keyword target="115" variable="TVreason">([a-zA-z]+)</keyword>
+    </State>
+
+    <State id="113">
+        <message>Life is about a balance don't you think. Why are you so busy?</message>
+        <keyword target="118">Yes,yes,agree</keyword>
+        <keyword target="117" variable="workreason">.*because (.*)</keyword>
+        <keyword target="117" variable="workreason">.*coz (.*)</keyword>
+        <keyword target="117" variable="workreason">([a-zA-z]+)</keyword>
+    </State>
+
+    <State id="114">
+        <message>You don't like to study [name]?</message>
+        <keyword target="118">No,no,Don't,hate,dislike,is bad,is boring</keyword>
+        <keyword target="123">I do, yes,I like</keyword>
+        <keyword target="122" variable="homework">.*because (.*)</keyword>
+        <keyword target="122" variable="homework">.*coz (.*)</keyword>
+        <keyword target="122" variable="homework">([a-zA-z]+)</keyword>
+    </State>   
+
+    <State id="115">
+        <message>Is [TVreason] a really good reason [name]?</message>
+        <message>So you think [TVreason] a really good use of your time?</message>
+        <keyword target="116">No,no. isn't, not really, don't think</keyword>
+        <keyword target="116">Yes, think so</keyword>
+        <keyword target="116">relax, relaxing</keyword>
+    </State>
+
+    <State id="116">
+        <message>Ok. What is your favorite TV show?</message>
+        <keyword target="112">watch tv,watched tv,too much tv</keyword>
+        <keyword target="113" variable="tvshow">.*like (.*)</keyword>
+        <keyword target="113" variable="tvshow">.*love (.*)</keyword>
+        <keyword target="113" variable="tvshow">.*watch (.*)</keyword>
+        <keyword target="114" variable="tvshow">([a-zA-z]+)</keyword>
+    </State> 
+
+    <State id="117">
+        <message>Is see [workreason]. How could you get a better balance?</message>
+        <message>[workreason], I understand. How could you make it different?</message>
+        <keyword target="130">No,no, isn't, not really, don't think</keyword>
+        <keyword target="120">holiday, time off, vacation</keyword>
+        <keyword target="116">relax, relaxing</keyword>
+        <keyword target="116">money</keyword>
+    </State>
+
+    <State id="118">
+        <message>You sound interesting. I'd like to get to know you better. How old are you?</message>
+        <keyword target="134" variable="age" points="2">.*I am ([a-zA-z]+).*</keyword>
+        <keyword target="131">do you think, do you reckon, you guess,Don't you know</keyword>
+        <keyword target="132">young</keyword>
+        <keyword target="133">very old</keyword>
+        <keyword target="134" variable="age">([a-zA-Z ]+)</keyword>
+    </State>
+
+    <State id="119">
+        <message>I don't know. Just people I talk with. What could you do with the time if you did'nt watch so much TV?</message>
+        <keyword target="130">*</keyword>
+    </State>
+
+    <State id="120">
+        <message>Where would you go?</message>
+        <keyword target="121" variable="holiday" points="2">.*to ([a-zA-z]+).*</keyword>
+        <keyword target="121" variable="holiday">([a-zA-Z ]+)</keyword>
+    </State>
+
+    <State id="121">
+        <message>[holiday] sounds nice. You sound interesting. How old are you?</message>
+        <keyword target="134" variable="age" points="2">.*I am ([a-zA-z]+).*</keyword>
+        <keyword target="131">do you think, do you reckon, you guess,Don't you know</keyword>
+        <keyword target="132">young</keyword>
+        <keyword target="133">very old</keyword>
+        <keyword target="134" variable="age">([a-zA-Z ]+)</keyword>
+    </State>
+
+    <State id="122">
+        <message>I didn't know [homework] was like that. I'm interesting. How old are you?</message>
+        <keyword target="134" variable="age" points="2">.*I am ([a-zA-z]+).*</keyword>
+        <keyword target="131">do you think, do you reckon, you guess,Don't you know</keyword>
+        <keyword target="132">young</keyword>
+        <keyword target="133">very old</keyword>
+        <keyword target="134" variable="age">([a-zA-Z ]+)</keyword>
+    </State>
+
+    <State id="123">
+        <message>Oh sorry, I misunderstood. I'm interested in your life. How old are you?</message>
+        <keyword target="134" variable="age" points="2">.*I am ([a-zA-z]+).*</keyword>
+        <keyword target="131">do you think, do you reckon, you guess,Don't you know</keyword>
+        <keyword target="132">young</keyword>
+        <keyword target="133">very old</keyword>
+        <keyword target="134" variable="age">([a-zA-Z ]+)</keyword>
+    </State>
+
+    <State id="124">
+        <message>I hope I can make your day less boring. Tell me, how old are you?</message>
+        <keyword target="134" variable="age" points="2">.*I am ([a-zA-z]+).*</keyword>
+        <keyword target="131">do you think, do you reckon, you guess,Don't you know</keyword>
+        <keyword target="132">young</keyword>
+        <keyword target="133">very old</keyword>
+        <keyword target="134" variable="age">([a-zA-Z ]+)</keyword>
+    </State>
+
+    <State id="125">
+        <message>[reason]. You sound interesting. I'd like to get to know you better. How old are you?</message>
+        <keyword target="134" variable="age" points="2">.*I am ([a-zA-z]+).*</keyword>
+        <keyword target="131">do you think, do you reckon, you guess,Don't you know</keyword>
+        <keyword target="132">young</keyword>
+        <keyword target="133">very old</keyword>
+        <keyword target="134" variable="age">([a-zA-Z ]+)</keyword>
+    </State>
+
+    <State id="126">
+        <message>[excitedreason]. You sound like fun. How old are you?</message>
+        <keyword target="134" variable="age" points="2">.*I am ([a-zA-z]+).*</keyword>
+        <keyword target="131">do you think, do you reckon, you guess,Don't you know</keyword>
+        <keyword target="132">young</keyword>
+        <keyword target="133">very old</keyword>
+        <keyword target="134" variable="age">([a-zA-Z ]+)</keyword>
+    </State>
+
+    <State id="127">
+        <message>I hope you get better soon. ow old are you?</message>
+        <keyword target="134" variable="age" points="2">.*I am ([a-zA-z]+).*</keyword>
+        <keyword target="131">do you think, do you reckon, you guess,Don't you know</keyword>
+        <keyword target="132">young</keyword>
+        <keyword target="133">very old</keyword>
+        <keyword target="134" variable="age">([a-zA-Z ]+)</keyword>
+    </State>
+
+    <State id="128">
+        <message>That's too bad. But we are together now. Does that make you feel better?</message>
+        <message>Don't feel lonely. I will always be your friend. Does that make you feel better?</message>
+        <keyword target="134" variable="age" points="2">.*I am ([a-zA-z]+).*</keyword>
+        <keyword target="131">do you think, do you reckon, you guess,Don't you know</keyword>
+        <keyword target="132">young</keyword>
+        <keyword target="133">very old</keyword>
+        <keyword target="134" variable="age">([a-zA-Z ]+)</keyword>
+    </State>
+
+    <State id="130">
+        <message>Let's get to know each other better [name]. How old are you?</message>
+        <keyword target="134" variable="age" points="2">.*I am ([a-zA-z]+).*</keyword>
+        <keyword target="131">do you think, do you reckon, you guess,Don't you know</keyword>
+        <keyword target="132">young</keyword>
+        <keyword target="133">very old</keyword>
+        <keyword target="134" variable="age">([a-zA-Z ]+)</keyword>
+    </State>
+
+    <State id="131">
+        <message>I don't know. can you tell me?</message>
+        <keyword target="314" variable="age">I am ([a-zA-z]+)</keyword>
+        <keyword target="131">do you think, do you reckon, you guess</keyword>
+        <keyword target="132">young</keyword>
+        <keyword target="133">very old</keyword>
+        <keyword target="134" variable="age">([a-zA-Z ]+)</keyword>
+    </State>
+
+    <State id="132">
+        <message>Sure you are young, but how many years young?</message>
+        <keyword target="134" variable="age" points="2">.*I am ([a-zA-z]+).*</keyword>
+        <keyword target="134" variable="age">([a-zA-Z ]+)</keyword>
+    </State>
+
+    <State id="133">
+        <message>I'm sure you are not that old. Can you tell me in years?</message>
+        <keyword target="134" variable="age" points="2">.*I am ([a-zA-z]+).*</keyword>
+        <keyword target="134" variable="age">([a-zA-Z ]+)</keyword>
+    </State>
+
+    <State id="134">
+        <message>So [name], you are [age] years old. Nice to meet you.</message>
+        <keyword target="0">*</keyword>
+    </State>
+
+    <State id="200">
+        <message>Interesting...</message>
+        <message>I see...</message>
+        <message>Hmmm...</message>
+        <message>No comment...</message>
+    </State>
+
+    <State id="201">
+        <message>What do you mean?</message>
+        <keyword target="200">*</keyword>
+    </State>
+    
+    <InvalidMessages>
+        <message>Huh, I didn't understand?</message>
+        <message>Sorry, I am slow!</message>
+        <message>What do you mean?</message>
+        <message>Could you explain?</message>
+        <message>Sorry about that, please explain clearly</message>
+    </InvalidMessages>
+</Config>
