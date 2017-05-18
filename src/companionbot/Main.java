@@ -1,4 +1,5 @@
 
+
 package companionbot;
 
 import companionbot.context.ConversationContext;
@@ -15,6 +16,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import companionbot.observer.TopicSubject;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingQueue;
+import com.sun.speech.freetts.*;
 
 /**
  *
@@ -30,16 +34,46 @@ public class Main implements Initializable {
     private TextField txtMessage;
     @FXML
     private Button button;
+    
+    //public BlockingQueue<String> queue;
 
     private Bot bot;
     
-       
+    // display bot response in the text area
+    private static final String VOICENAME="kevin16";
     public void addBotText(String message) {
         txtHistory.setText(txtHistory.getText() + "\nBot: " + message);
+        Voice voice;
+            VoiceManager vm= VoiceManager.getInstance();
+            voice=vm.getVoice(VOICENAME);
+            
+            voice.allocate();
+            
+            try{
+                voice.speak(bot.getMessage());
+            }catch(Exception e){
+        }
     }
     
     public void deleteHistory() {
         txtHistory.setText("");
+    }
+        
+    public void listen (String userSpeech) {        
+
+        System.out.println("from main listen method: " + userSpeech + '\n');
+        
+        txtHistory.setText(txtHistory.getText() + "\nYou: " + userSpeech + "\n");
+        
+        //send the input to the bot and get bot response
+        String response = bot.send(userSpeech);
+        
+        //if the response is not empty show it
+        if (response.length() > 0) {
+            addBotText(response);
+        }   
+        //display new state message to continue
+        addBotText(bot.getMessage()); 
     }
     
     @FXML
