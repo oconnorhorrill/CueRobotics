@@ -1,5 +1,5 @@
 
-package smallTalk;
+package companionbot.smalltalk;
 
 import java.util.Date;
 import java.text.SimpleDateFormat;
