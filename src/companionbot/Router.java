@@ -20,7 +20,9 @@ public class Router {
                 if (str.length() > 0) {
         userSpeech = str;
         System.out.println("from router queue: " + userSpeech + '\n');
-        Main main= new Main();
+        //TODO check the string before handing it to the bot. Method to check repetition. Method to check last utterance.
+        // Send the user speech to bot the via via the text field in the gui
+        //Main main= new Main();
         main.listen(userSpeech);
         }
         }
