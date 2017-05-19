@@ -27,7 +27,7 @@ public class News {
     public String business = "";
 
     // yahoo API URL for london weather
-    private static String url = "http://www.cuerobotics/smallTalk//news.xml";   
+    private static String url = "http://www.cuerobotics/cue/news.xml";   
 
     // default constructor
     public News() {
