@@ -31,7 +31,7 @@ public class Weather {
     public String hobart = "";
 
     // Cue robotics weather xml
-    private String url = "http://www.cuerobotics/smallTalk/weather.xml";   
+    private String url = "http://www.cuerobotics/cue/weather.xml";   
 
     // default constructor
     public Weather() {
