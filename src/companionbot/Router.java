@@ -6,8 +6,7 @@ import java.awt.event.ActionEvent;
 
 public class Router {
     public BlockingQueue<String>queue;
-    public String userSpeech;
-    //private Main main;
+    public String userText;
     
     public Router(String str, BlockingQueue<String> queue) {
         this.queue = queue;
@@ -18,12 +17,11 @@ public class Router {
        {
         String str = queue.take();
                 if (str.length() > 0) {
-        userSpeech = str;
+        userText = str;
         System.out.println("from router queue: " + userSpeech + '\n');
-        //TODO check the string before handing it to the bot. Method to check repetition. Method to check last utterance.
-        // Send the user speech to bot the via via the text field in the gui
-        Main main= new Main();
-        main.listen(userSpeech);
+        //TODO Check the user speech first before passing it to Main, update text area object.
+                    
+        //Main.listen(userText);
         }
         }
         catch (InterruptedException e)
