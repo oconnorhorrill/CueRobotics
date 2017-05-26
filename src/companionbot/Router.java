@@ -1,15 +1,22 @@
 
 package companionbot;
     
+//import companionbot.observer.TopicSubject;
+import companionbot.observer.VoiceSubject;
 import java.util.concurrent.*;
 import java.awt.event.ActionEvent;
 
 public class Router {
+    
     public BlockingQueue<String>queue;
+    
+    private final VoiceSubject voiceSubject;
+    
     public String userText;
     
-    public Router(String str, BlockingQueue<String> queue) {
+    public Router(String str, BlockingQueue<String> queue, VoiceSubject voicesubject) {
         this.queue = queue;
+        this.voiceSubject = voiceSubject;
     }
     public synchronized void speak ()
     {        
@@ -21,7 +28,7 @@ public class Router {
         System.out.println("from router queue: " + userSpeech + '\n');
         //TODO Check the user speech first before passing it to Main, update text area object.
                     
-        //Main.listen(userText);
+        voiceSubject.notifyObservers();
         }
         }
         catch (InterruptedException e)
