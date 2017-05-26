@@ -27,7 +27,8 @@ public class Router {
         userText = str;
         System.out.println("from router queue: " + userSpeech + '\n');
         //TODO Check the user speech first before passing it to Main, update text area object.
-                    
+        
+        //Now tell the observer and get the user text to the bot and text history            
         voiceSubject.notifyObservers();
         }
         }
