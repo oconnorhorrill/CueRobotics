@@ -123,7 +123,7 @@ public class Main implements Initializable {
         VoiceObserver voiceOb = new VoiceObserverImpl(txtHistory);
         VoiceSubject voiceSub = new VoiceSubjectImpl();
         voiceSub.addObserver(voiceOb);
-        return voiceOb;
+        return voiceSub;
     }
 
     @Override
