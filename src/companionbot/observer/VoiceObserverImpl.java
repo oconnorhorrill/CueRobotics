@@ -6,7 +6,7 @@ package companionbot.observer;
 
 import javafx.scene.control.TextArea;
 
-public class VoiceObserverImpl implements TopicObserver {
+public class VoiceObserverImpl implements VoiceObserver {
     
     private final TextArea textArea;
     
