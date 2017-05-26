@@ -34,8 +34,6 @@ public class Main implements Initializable {
     private TextField txtMessage;
     @FXML
     private Button button;
-    
-    //public BlockingQueue<String> queue;
 
     private Bot bot;
     
