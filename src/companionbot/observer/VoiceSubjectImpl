@@ -1,0 +1,28 @@
+package companionbot.observer;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class VoiceSubjectImpl implements VoiceSubject {
+    
+    private final Set<VoiceObserver> observers;
+    
+    public VoiceSubjectImpl() {
+        observers = new HashSet<>();
+    }
+    
+    @Override
+    public void addObserver(VoiceObserver voiceObserver) {
+        observers.add(voiceObserver);
+    }
+    
+    @Override
+    public boolean deleteObserver(VoiceObserver voiceObserver) {
+        return observers.remove(voiceObserver);
+    }
+    
+    @Override
+    public void notifyObservers() {
+        observers.forEach(o -> o.update());
+    }
+}
