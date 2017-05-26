@@ -111,13 +111,25 @@ public class Main implements Initializable {
         subject.addObserver(observer);
         return subject;
     }
-
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        loadContext();  
+    public void loadVoiceInput (){
+        VoiceSubject voice = setupVoice();
         BlockingQueue<String> queue = new ArrayBlockingQueue<>(1);
         Runnable reply = new Reply(queue);
         new Thread(reply).start();
+        Router router = new Router("response", queue, voice);
+    }
+    
+    private VoiceSubject setupVoice(){
+        VoiceObserver voiceOb = new VoiceObserverImpl(txtHistory);
+        VoiceSubject voiceSub = new VoiceSubjectImpl();
+        voiceSub.addObserver(voiceOb);
+        return voiceOb;
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        loadContext();
+        loadVoiceInput();
     }    
     
 }
