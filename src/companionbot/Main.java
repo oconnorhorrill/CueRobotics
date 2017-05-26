@@ -117,6 +117,9 @@ public class Main implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         loadContext();  
+        BlockingQueue<String> queue = new ArrayBlockingQueue<>(1);
+        Runnable reply = new Reply(queue);
+        new Thread(reply).start();
     }    
     
 }
